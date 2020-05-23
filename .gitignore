@@ -106,3 +106,10 @@ venv.bak/
 # mypy
 .mypy_cache/
 node_modules
+
+.idea/
+.DS_Store
+
+#tag: T-Week-1 2020-05-16
+/word2vec/datasets
+/word2vec/utils/*.bin
