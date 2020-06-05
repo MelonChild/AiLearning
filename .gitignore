@@ -117,3 +117,8 @@ node_modules
 #tag: T-Week-2 2020-05-25
 /seq2seq_tf2/datasets
 /seq2seq_tf2/utils
+/seq2seq_tf2/ckpt/*
+
+#tag: T-Week-3 202006-04
+/seq2seq_tf21
+/utils/*.bin

@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 import pandas as pd
 import os
 from sklearn.model_selection import train_test_split

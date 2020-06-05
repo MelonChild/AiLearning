@@ -11,13 +11,19 @@ class Encoder(tf.keras.layers.Layer):
         定义Embedding层，加载预训练的词向量
         your code
         """
-        self.embedding = tf.keras.layers.Embedding(vocab_size,embedding_dim)
+        self.embedding = tf.keras.layers.Embedding(vocab_size,
+                                                   embedding_dim,
+                                                   weights=[embedding_matrix],
+                                                   trainable=False)
         # tf.keras.layers.GRU自动匹配cpu、gpu
         """
         定义单向的RNN、GRU、LSTM层
         your code
         """
-        self.gru = tf.keras.layers.GRU(self.enc_units,return_sequences=True,return_state=True,recurrent_initializer='glorot_uniform')
+        self.gru = tf.keras.layers.GRU(self.enc_units,
+                                       return_sequences=True,
+                                       return_state=True,
+                                       recurrent_initializer='glorot_uniform')
 
         self.bigru = tf.keras.layers.Bidirectional(self.gru, merge_mode='concat')
 

@@ -1,14 +1,8 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-import os
-
-from gensim.models import word2vec
+from gensim.models import Word2Vec
 from gensim.models.word2vec import LineSentence
 from gensim.models.keyedvectors import KeyedVectors
-
 from data_utils import dump_pkl
-
-
+import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -44,20 +38,12 @@ def save_sentence(lines, sentence_path):
 
 def build(train_x_seg_path, test_y_seg_path, test_seg_path, out_path=None, sentence_path='',
           w2v_bin_path="w2v.bin", min_count=1):
-    # save sentence
-    # sentences = extract_sentence(train_x_seg_path, test_y_seg_path, test_seg_path)
-    # save_sentence(sentences, sentence_path)
-
-    # get sentences by ginsim
-    sentences = LineSentence(sentence_path)
-
+    sentences = extract_sentence(train_x_seg_path, test_y_seg_path, test_seg_path)
+    save_sentence(sentences, sentence_path)
     print('train w2v model...')
     # train model
-    """
-    通过gensim工具完成word2vec的训练，输入格式采用sentences，使用skip-gram，embedding维度256
-    """
-    w2v = word2vec.Word2Vec(sentences=sentences,size=256,min_count=min_count)
-    print("输出模型", w2v)
+    w2v = Word2Vec(sg=1, sentences=LineSentence(sentence_path),
+                   size=256, window=5, min_count=min_count, iter=40)
     w2v.wv.save_word2vec_format(w2v_bin_path, binary=True)
     print("save %s ok." % w2v_bin_path)
     # test

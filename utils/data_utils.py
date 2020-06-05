@@ -1,11 +1,10 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 import numpy as np
 import pickle
 import os
 import copy
 import time
 from collections import Counter
+
 
 PAD_TOKEN = 'PAD'
 GO_TOKEN = 'GO'
@@ -15,6 +14,7 @@ UNK_TOKEN = 'UNK'
 start_id = 0
 end_id = 1
 unk_id = 2
+
 
 def save_word_dict(dict_data, save_path):
     with open(save_path, 'w', encoding='utf-8') as f:
