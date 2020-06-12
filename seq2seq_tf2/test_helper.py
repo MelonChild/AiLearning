@@ -45,7 +45,8 @@ def batch_greedy_decode(model, enc_data, vocab, params):
         your code, 通过调用decoder得到预测的概率分布
         """
         context_vector, _ = model.attention(dec_hidden, enc_output)
-        predicts,dec_hidden = model.decoder(dec_input,dec_hidden,enc_output,context_vector)
+        predicts = model.decoder(dec_input,dec_hidden,enc_output,context_vector)
+        print(predicts)
         """
         your code, 通过调用tf.argmax完成greedy search，得到predicted_ids
         """

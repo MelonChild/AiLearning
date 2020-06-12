@@ -6,7 +6,7 @@ sys.path.append(BASE_DIR)
 import tensorflow as tf
 import argparse
 from seq2seq_tf2.train_eval_test import train, test, evaluate
-from word2vec.utils.data_utils import get_result_filename
+from utils.data_utils import get_result_filename
 # from utils.log_utils import define_logger
 import pathlib
 
@@ -30,7 +30,7 @@ def main():
     parser.add_argument("--beam_size", default=3,
                         help="beam size for beam search decoding (must be equal to batch size in decode mode)",
                         type=int)
-    parser.add_argument("--vocab_size", default=1, help="Vocabulary size", type=int)
+    parser.add_argument("--vocab_size", default=100, help="Vocabulary size", type=int)
     parser.add_argument("--embed_size", default=256, help="Words embeddings dimension", type=int)
     parser.add_argument("--enc_units", default=256, help="Encoder GRU cell units number", type=int)
     parser.add_argument("--dec_units", default=256, help="Decoder GRU cell units number", type=int)

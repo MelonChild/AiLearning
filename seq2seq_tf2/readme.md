@@ -105,3 +105,17 @@ Week2-基于Seq2Seq架构的模型搭建
 + 2020-05-29
 
   使用华为云GPU,调试代码
+  
+### week3
+
++ 2020-06-03
+
+    完善test_helper代码
+
++ 2020-06-05
+
+    测试训练模型
+    
+        Creating the checkpoint manager
+        Model restored
+          0%|          | 0/7 [00:00<?, ?it/s]
