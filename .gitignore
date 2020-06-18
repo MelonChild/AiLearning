@@ -122,3 +122,7 @@ node_modules
 #tag: T-Week-3 202006-04
 /seq2seq_tf21
 /utils/*.bin
+
+#tag: T-Week-4 202006-07
+/datasets
+*.bin
