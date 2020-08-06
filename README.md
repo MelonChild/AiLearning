@@ -30,7 +30,7 @@ Week3-NLG过程的优化与项目 Inference
      + datasets: 数据集
      + encoders decoders:rnn编解码
 
-+ seq2seq_pgn_tf2 
++ seq2seq_pgn_tf2   
 Week4-OOV和Word-repetition问题的改进
 
       tag: T-Week-4
@@ -38,3 +38,9 @@ Week4-OOV和Word-repetition问题的改进
      + utils：工具集
      + datasets: 数据集
      + encoders decoders:rnn编解码
++ mrc   
+Week9 机器阅读理解
+
+      tag:T-Week-9
+      
+     + utils:工具集
