@@ -129,3 +129,6 @@ node_modules
 
 #tag: T-Week-9 202008-08
 /mrc/datasets
+
+#tag: T-Week-10 202008-10
+/BiDAF_tf2/data

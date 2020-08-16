@@ -44,3 +44,6 @@ Week9 机器阅读理解
       tag:T-Week-9
       
      + utils:工具集
+
++ BiDAF_tf2 
+Week10 基于Attention机制的经典机器阅读模型
